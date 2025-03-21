@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Love For Hadeel Only</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div class="hearts-container"></div>
 
     <div class="content">
-        <h1>كل الحب ل هديل وحدها</h1>
+        <h1>كل الحب لسمرتي الجميلة </h1>
     </div>
 
     <script>
         const names = ['هدهد', 'هداهيدو', 'هدولي', 'هداهد', 'هدوش', 'هدولتي', 'لولا', 'هديلو'];
-        
+
         function createHeart() {
             const heart = document.createElement('div');
             heart.className = 'heart';
-            
+
             const text = document.createElement('div');
             text.className = 'heart-text';
             text.textContent = names[Math.floor(Math.random() * names.length)];
@@ -29,18 +34,19 @@
             const startY = Math.random() * window.innerHeight;
             const tx = (Math.random() - 0.5) * 500;
             const ty = (Math.random() - 0.5) * 500;
-            
+
             heart.style.setProperty('--tx', `${tx}px`);
             heart.style.setProperty('--ty', `${ty}px`);
             heart.style.left = `${startX}px`;
             heart.style.top = `${startY}px`;
-            
+
             document.querySelector('.hearts-container').appendChild(heart);
-            
+
             setTimeout(() => heart.remove(), 6000);
         }
 
         setInterval(createHeart, 300);
     </script>
 </body>
+
 </html>

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>All Love For Hadeel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Love For Hadeel Only</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="hearts-container"></div>
 
     <div class="content">
-        <h1>All Love For Hadeel Only</h1>
+        <h1>كل الحب ل هديل وحدها</h1>
     </div>
 
     <script>
@@ -18,13 +20,11 @@
             const heart = document.createElement('div');
             heart.className = 'heart';
             
-            // إضافة النص المنسق
             const text = document.createElement('div');
             text.className = 'heart-text';
             text.textContent = names[Math.floor(Math.random() * names.length)];
             heart.appendChild(text);
 
-            // إعداد الحركة العشوائية
             const startX = Math.random() * window.innerWidth;
             const startY = Math.random() * window.innerHeight;
             const tx = (Math.random() - 0.5) * 500;

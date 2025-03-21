@@ -102,6 +102,6 @@ body {
 /* Responsive */
 @media (max-width: 767px) {
     .content h1 {
-        font-size: 50px;
+        font-size: 40px;
     }
 }

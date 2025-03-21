@@ -1,29 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Love For Hadeel Only</title>
-    <Link rel="stylesheet" href="style.css">
+    <title>All Love For Hadeel</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
-    <div>
-        <h1 id="wordLove">
-            <span>All</span> 
-            <span>Love</span> 
-            <span>For</span> 
-            <span class="name">Hadeel</span> 
-            <span>Only</span>
-        </h1>
-    </div>
-    
-    <div class="background">
+    <div class="hearts-container"></div>
 
+    <div class="content">
+        <h1>All Love For Hadeel Only</h1>
     </div>
 
-    <script href="./script.js"  />
+    <script>
+        const names = ['هدهد', 'هداهيدو', 'هدولي', 'هداهد', 'هدوش', 'هدولتي', 'لولا', 'هديلو'];
+        
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            
+            // إضافة النص المنسق
+            const text = document.createElement('div');
+            text.className = 'heart-text';
+            text.textContent = names[Math.floor(Math.random() * names.length)];
+            heart.appendChild(text);
+
+            // إعداد الحركة العشوائية
+            const startX = Math.random() * window.innerWidth;
+            const startY = Math.random() * window.innerHeight;
+            const tx = (Math.random() - 0.5) * 500;
+            const ty = (Math.random() - 0.5) * 500;
+            
+            heart.style.setProperty('--tx', `${tx}px`);
+            heart.style.setProperty('--ty', `${ty}px`);
+            heart.style.left = `${startX}px`;
+            heart.style.top = `${startY}px`;
+            
+            document.querySelector('.hearts-container').appendChild(heart);
+            
+            setTimeout(() => heart.remove(), 6000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>
 </body>
-
 </html>

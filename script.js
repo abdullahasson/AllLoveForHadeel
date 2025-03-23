@@ -50,7 +50,7 @@ function createHeart() {
 
     document.querySelector('.hearts-container').appendChild(heart);
 
-    setTimeout(() => heart.remove(), 6000);
+    setTimeout(() => heart.remove(), 4000);
 }
 
-setInterval(createHeart, 500);
+setInterval(createHeart, 100);

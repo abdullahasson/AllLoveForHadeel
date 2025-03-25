@@ -17,7 +17,7 @@ body {
 
 .heart {
     position: absolute;
-    color: #ff3366;
+    color: red;
     animation: pulse 1s ease-in-out infinite, move 6s linear infinite;
 }
 
@@ -90,6 +90,7 @@ body {
     height: 85px;
     background-color: transparent;
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
     z-index: 2000;

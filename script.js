@@ -26,7 +26,9 @@ button.addEventListener('click', readText);
 const names = [
     'هدهد', 'هداهيدو', 'هدولي', 'عبودي', 
     'هدوش', 'هدولتي', 'لولا', 'هديلو' , 
-    'سبايدرمانة' , 'هديلي' , 'هدو' , 'يايا' , 'هدود' , 'سمرتي الجميلة' , 'ملاكي الصغيرة' , 'هداهد'
+    'سبايدرمانة' , 'هديلي' , 'هدو' , 
+    'يايا' , 'هدود' , 'سمرتي الجميلة' , 
+    'ملاكي الصغيرة' , 'هداهد' , 'هيدو' 
 ];
 
 function createHeart() {
@@ -53,4 +55,4 @@ function createHeart() {
     setTimeout(() => heart.remove(), 4000);
 }
 
-setInterval(createHeart, 100);
+setInterval(createHeart, 300);

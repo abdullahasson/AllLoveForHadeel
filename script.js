@@ -28,7 +28,7 @@ const names = [
     'هدوش', 'هدولتي', 'لولا', 'هديلو' , 
     'سبايدرمانة' , 'هديلي' , 'هدو' , 
     'يايا' , 'هدود' , 'سمرتي الجميلة' , 
-    'ملاكي الصغيرة' , 'هداهد' , 'هيدو' , 'هديل'
+    'ملاكي الصغيرة' , 'هداهد' , 'هيدو'
 ];
 
 function createHeart() {
@@ -52,7 +52,7 @@ function createHeart() {
 
     document.querySelector('.hearts-container').appendChild(heart);
 
-    setTimeout(() => heart.remove(), 5000);
+    setTimeout(() => heart.remove(), 4000);
 }
 
-setInterval(createHeart, 500);
+setInterval(createHeart, 300);

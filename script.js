@@ -55,4 +55,4 @@ function createHeart() {
     setTimeout(() => heart.remove(), 4000);
 }
 
-setInterval(createHeart, 100);
+setInterval(createHeart, 400);

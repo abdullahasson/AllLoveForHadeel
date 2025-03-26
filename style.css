@@ -15,10 +15,35 @@ body {
     height: 100%;
 }
 
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.8));
+    }
+    50% {
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.8));
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(400px, -400px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
 .heart {
     position: absolute;
     color: red;
-    animation: pulse 1s ease-in-out infinite, move 6s linear infinite;
+    animation: 
+        pulse 1s ease-in-out infinite,
+        move 6s linear infinite;
+    filter: drop-shadow(0 0 5px currentColor);
 }
 
 .heart::before,
@@ -26,10 +51,14 @@ body {
     content: '';
     position: absolute;
     width: 30px;
-    /* حجم متوسط */
     height: 48px;
     background: currentColor;
     border-radius: 30px 30px 0 0;
+    box-shadow: 
+        0 0 15px currentColor,
+        0 0 30px rgba(255, 165, 0, 0.5),
+        0 0 45px rgba(255, 255, 0, 0.3),
+        0 0 60px rgba(0, 255, 0, 0.2);
 }
 
 .heart::before {
@@ -60,29 +89,7 @@ body {
     font-family: "Cairo", sans-serif;
 }
 
-@keyframes pulse {
 
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.2);
-    }
-}
-
-@keyframes move {
-    0% {
-        opacity: 1;
-        transform: translate(0, 0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translate(var(--tx), var(--ty));
-    }
-}
 
 .content {
     position: relative;

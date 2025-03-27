@@ -109,6 +109,8 @@ body {
     height: 85px;
     background-color: transparent;
     display: flex;
+    flex-direction: column;
+    gap: 0px;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -116,9 +118,10 @@ body {
 
 }
 
-.content h1 {
+.content h1 , h2 {
     font-family: "Cairo", sans-serif;
     color: white;
+    margin: 0;
 }
 
 #text {

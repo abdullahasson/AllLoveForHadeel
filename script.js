@@ -1,6 +1,7 @@
 // نختار العناصر من الصفحة
 const button = document.getElementById('content');
 const textElement = document.getElementById('text');
+const hours = document.querySelector('.content h1')
 
 // ننشئ قارئ النصوص
 const speech = new SpeechSynthesisUtterance();
@@ -23,15 +24,19 @@ function readText() {
 // نضيف حدث النقر على الزر
 button.addEventListener('click', readText);
 
+
+
+
 const names = [
     'هدهد', 'هداهيدو', 'هدولي', 'عبودي', 
     'هدوش', 'هدولتي', 'لولا', 'هديلو' , 
     'سبايدرمانة' , 'هديلي' , 'هدو' , 
     'يايا' , 'هدود' , 'سمرتي الجميلة' , 
-    'ملاكي الصغيرة' , 'هداهد' , 'هيدو'
+    'ملاكي الصغيرة' , 'هداهد' , 'هيدو' , 'أم خدود' 
 ];
 
 function createHeart() {
+    const time = new Date()
     const heart = document.createElement('div');
     heart.className = 'heart';
 
@@ -49,6 +54,8 @@ function createHeart() {
     heart.style.setProperty('--ty', `${ty}px`);
     heart.style.left = `${startX}px`;
     heart.style.top = `${startY}px`;
+
+    hours.textContent = 11 + ' : ' + time.getMinutes() + ' : ' + time.getSeconds()
 
     document.querySelector('.hearts-container').appendChild(heart);
 

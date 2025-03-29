@@ -36,6 +36,7 @@ const names = [
     'ملاكي الصغيرة' , 'هداهد' , 'هيدو' , 'أم خدود' 
 ];
 
+
 function createHeart() {
     const time = new Date()
     const heart = document.createElement('div');
@@ -68,6 +69,6 @@ function createHeart() {
 
 setInterval(() => {
     dname.textContent = names[Math.floor(Math.random() * names.length)];
-} , 1000);
+} , 500);
 
 setInterval(createHeart, 300);

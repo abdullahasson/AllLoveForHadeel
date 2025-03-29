@@ -124,6 +124,10 @@ body {
     margin: 0;
 }
 
+#dname {
+    color : #f73131;
+}
+
 #text {
     display: none;
 }

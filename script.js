@@ -2,6 +2,7 @@
 const button = document.getElementById('content');
 const textElement = document.getElementById('text');
 const hours = document.querySelector('.content h1')
+const dname = document.getElementById('dname');
 
 // ننشئ قارئ النصوص
 const speech = new SpeechSynthesisUtterance();
@@ -43,6 +44,7 @@ function createHeart() {
     const text = document.createElement('div');
     text.className = 'heart-text';
     text.textContent = names[Math.floor(Math.random() * names.length)];
+    
     heart.appendChild(text);
 
     const startX = Math.random() * window.innerWidth;
@@ -55,11 +57,17 @@ function createHeart() {
     heart.style.left = `${startX}px`;
     heart.style.top = `${startY}px`;
 
-    hours.textContent = 11 + ' : ' + time.getMinutes() + ' : ' + time.getSeconds()
+    hours.textContent = time.getHours() + ' : ' + time.getMinutes() + ' : ' + time.getSeconds()
 
     document.querySelector('.hearts-container').appendChild(heart);
 
-    setTimeout(() => heart.remove(), 4000);
+    setTimeout(() => {
+        heart.remove();
+    }, 4000);
 }
+
+setInterval(() => {
+    dname.textContent = names[Math.floor(Math.random() * names.length)];
+} , 1000);
 
 setInterval(createHeart, 300);
